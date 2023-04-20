@@ -1,23 +1,32 @@
-import React, { HTMLAttributes, PropsWithChildren } from 'react';
-import cls from './P.module.css';
 import clsx from 'clsx';
+import { HTMLAttributes, PropsWithChildren } from 'react';
+import cls from './Tag.module.css';
 
-interface PProps extends HTMLAttributes<HTMLParagraphElement> {
-  size?: PSize;
+interface TagProps extends HTMLAttributes<HTMLDivElement> {
+  size?: TagSize;
+  color?: TagColor;
+  href?: string;
 }
 
-export const enum PSize {
+export const enum TagSize {
   S = 'size_s',
-  M = 'size_m',
-  L = 'size_l'
+  M = 'size_m'
 }
 
-export const P = (props: PropsWithChildren<PProps>): JSX.Element => {
-  const { children, size = PSize.M, ...restProps } = props;
+export const enum TagColor {
+  GHOST = 'ghost',
+  RED = 'red',
+  GRAY = 'gray',
+  GREEN = 'green',
+  PRIMARY = 'primary'
+}
+
+export const Tag = (props: PropsWithChildren<TagProps>): JSX.Element => {
+  const { children, href, color = TagColor.PRIMARY, size = TagSize.M, ...restProps } = props;
 
   return (
-    <p className={clsx(cls.p, cls[size])} {...restProps}>
-      {children}
-    </p>
+    <div className={clsx(cls.tag, cls[size], cls[color])} {...restProps}>
+      {href !== undefined ? <a href={href}>{children}</a> : <>{children}</>}
+    </div>
   );
 };

@@ -1,16 +1,7 @@
-import React, { PropsWithChildren } from 'react';
+import React, { HTMLAttributes } from 'react';
 
-export const Layout = (props: PropsWithChildren): JSX.Element => {
-  const { children } = props;
+interface SidebarProps extends HTMLAttributes<HTMLDivElement> {}
 
-  return (
-    <>
-      <header />
-      <div>
-        <Sidebar />
-        <div>{children}</div>
-      </div>
-      <footer></footer>
-    </>
-  );
+export const Sidebar = (props: SidebarProps): JSX.Element => {
+  return <aside {...props}>Sidebar</aside>;
 };

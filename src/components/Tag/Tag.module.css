@@ -1,18 +1,74 @@
-.p {
-  font-weight: 400;
+.tag {
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 20px;
 }
 
 .size_s {
-  font-size: 14px;
-  line-height: 24px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 12px;
 }
 
 .size_m {
-  font-size: 16px;
-  line-height: 24px;
+  padding: 5px 10px;
+  font-size: 14px;
+  line-height: 12px;
 }
 
-.size_l {
-  font-size: 18px;
-  line-height: 29px;
+.ghost {
+  border: 1px solid var(--gray-light);
+}
+
+.ghost a {
+  text-decoration: none;
+}
+
+.red {
+  font-weight: bold;
+  color: var(--white);
+  background: #de0000;
+}
+
+.red a {
+  font-weight: bold;
+  color: var(--white);
+  background: #de0000;
+  text-decoration: none;
+}
+
+.gray {
+  background: var(--black);
+  color: var(--white);
+}
+
+.gray a {
+  background: var(--black);
+  color: var(--white);
+  text-decoration: none;
+}
+
+.green {
+  background: var(--green-light);
+  color: var(--green);
+  font-weight: bold;
+}
+
+.green a {
+  color: var(--green);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.primary {
+  color: var(--primary);
+  background: none;
+  border: 1px solid var(--primary);
+}
+
+.primary a {
+  color: var(--primary);
+  background: none;
+  border: 1px solid var(--primary);
+  text-decoration: none;
 }

@@ -1,7 +1,7 @@
 import React, { HTMLAttributes } from 'react';
 
-interface SidebarProps extends HTMLAttributes<HTMLDivElement> {}
+interface HeaderProps extends HTMLAttributes<HTMLDivElement> {}
 
-export const Sidebar = (props: SidebarProps): JSX.Element => {
-  return <div {...props}></div>;
+export const Header = (props: HeaderProps): JSX.Element => {
+  return <header {...props}>Header</header>;
 };
